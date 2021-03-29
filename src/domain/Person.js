@@ -1,5 +1,5 @@
 export default class Person {
-  constructor(theHeight, theWeight) {
+  constructor(thetotalSalary, thedependentsNumber) {
     this.totalSalary = thetotalSalary;
     this.dependentsNumber = thedependentsNumber;
     this.irpf = null;
