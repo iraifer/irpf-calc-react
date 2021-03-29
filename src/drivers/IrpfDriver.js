@@ -1,6 +1,6 @@
 import HttpUtil from '../http/HttpUtil.js';
 
-export default class ImcDriver {
+export default class IrpfDriver {
   constructor() {
     this.xhr = new HttpUtil();
     this.get = new Proxy(this.xhr.get, {
@@ -19,7 +19,7 @@ export default class ImcDriver {
 
   getTable() {
     return this
-      .get('http://localhost:8080', '/imc/table')
+      .get('http://localhost:8080', '/irpf/table')
       .then(function (rawResponse) {
         return rawResponse.json();
       });
@@ -31,7 +31,7 @@ export default class ImcDriver {
    */
   async calculate(person) {
     const response = await this.xhr
-      .post('http://localhost:8080', '/imc/calculate', person);
+      .post('http://localhost:8080', '/irpf/calculate', person);
 
     return await response.json();
   }

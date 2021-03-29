@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-import ImcController from '../controllers/ImcController';
+import IrpfController from '../controllers/IrpfController';
 
-function ImcTableView() {
+function IrpfTableView() {
 
-  const [controller,] = useState(new ImcController());
+  const [controller,] = useState(new IrpfController());
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
@@ -26,4 +26,4 @@ function ImcTableView() {
     </tbody></table>);
 }
 
-export default ImcTableView;
+export default IrpfTableView;

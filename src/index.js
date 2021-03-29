@@ -14,7 +14,7 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 function render() {
-  const ImcApp = lazy(() => import('./apps/ImcApp'));
+  const IrpfApp = lazy(() => import('./apps/IrpfApp'));
   const OtherApp = lazy(() => import('./apps/OtherApp'));
 
   ReactDOM.render(
@@ -22,7 +22,7 @@ function render() {
       <div>
         <ul>
           <li>
-            <Link to="/imc">Imc App</Link>
+            <Link to="/irpf">Irpf App</Link>
           </li>
           <li>
             <Link to="/other">Other App</Link>
@@ -31,10 +31,10 @@ function render() {
       </div>
       <br />
       <Switch>
-        <Route path="/imc">
-          <Suspense fallback={<span>loading imc app...</span>}>
+        <Route path="/irpf">
+          <Suspense fallback={<span>loading irpf app...</span>}>
             <PersonContextProvider>
-              <ImcApp />
+              <IrpfApp />
             </PersonContextProvider>
           </Suspense>
         </Route>

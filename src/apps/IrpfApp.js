@@ -2,19 +2,19 @@ import { useState } from "react";
 
 import { usePerson } from '../hooks/usePerson.hook';
 
-import ImcTableView from "../views/ImcTableView";
-import ImcView from "../views/ImcView";
-import ImcForm from "../views/forms/ImcForm";
-import ImcController from "../controllers/ImcController";
+import IrpfTableView from "../views/IrpfTableView";
+import IrpfView from "../views/IrpfView";
+import IrpfForm from "../views/forms/IrpfForm";
+import IrpfController from "../controllers/IrpfController";
 import Person from "../domain/Person";
 
-import "./ImcApp.css";
+import "./IrpfApp.css";
 
-function ImcApp() {
+function IrpfApp() {
   const [,setPerson] = usePerson();
-  const [controller,] = useState(new ImcController());
+  const [controller,] = useState(new IrpfController());
  
-  const calculateImc = async (height, weight) => {
+  const calculateIrpf = async (height, weight) => {
     var newPerson = new Person(parseFloat(height),parseFloat(weight));
 
     const calculatedPerson = await controller.calculate(newPerson.toObject());
@@ -26,16 +26,16 @@ function ImcApp() {
       <div className="data">
         <div className="form">
           <div className="row">
-            <ImcTableView />
+            <IrpfTableView />
           </div>
           <hr />
-          <ImcForm onSubmit={calculateImc} />
+          <IrpfForm onSubmit={calculateIrpf} />
         </div>
       </div>
       <hr />
-      <ImcView class="data" />
+      <IrpfView class="data" />
     </div>
   );
 }
 
-export default ImcApp;
+export default IrpfApp;

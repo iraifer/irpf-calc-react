@@ -1,46 +1,46 @@
 export default class Person {
   constructor(theHeight, theWeight) {
-    this.height = theHeight;
-    this.weight = theWeight;
-    this.imc = null;
+    this.totalSalary = thetotalSalary;
+    this.dependentsNumber = thedependentsNumber;
+    this.irpf = null;
   }
 
   isValid() {
-    return this.height && this.weight;
+    return this.totalSalary && this.dependentsNumber;
   }
 
   get height() {
-    return this._height;
+    return this._totalSalary;
   }
 
   get weight() {
-    return this._weight;
+    return this._dependentsNumber;
   }
 
-  get imc() {
-    return this._imc;
+  get irpf() {
+    return this._irpf;
   }
 
-  set height(theHeight) {
-    console.log('setting height');
-    this._height = theHeight;
+  set height(thetotalSalary) {
+    console.log('setting total salary');
+    this._totalSalary = thetotalSalary;
   }
 
-  set weight(theWeight) {
-    console.log('setting weight');
-    this._weight = theWeight;
+  set weight(thedependentsNumber) {
+    console.log('setting dependents numbert');
+    this._dependentsNumber = thedependentsNumber;
   }
 
-  set imc(theImc)  {
-    console.log('setting imc');
-    this._imc = theImc;
+  set irpf(theIrpf)  {
+    console.log('setting irpf');
+    this._irpf = theIrpf;
   }
 
   toObject() {
     return {
-      height: this._height,
-      weight: this._weight,
-      imc: this._imc
+      totalSalary: this._totalSalary,
+      dependentsNumber: this._dependentsNumber,
+      irpf: this._irpf
     };
   }
 }

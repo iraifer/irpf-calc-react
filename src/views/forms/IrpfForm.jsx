@@ -1,7 +1,7 @@
 import { useInput } from "../../hooks/useInput.hook";
 import { usePerson } from '../../hooks/usePerson.hook';
 
-function ImcForm({ onSubmit }) {
+function IrpfForm({ onSubmit }) {
   const [person] = usePerson();
 
   const [height, , heightProps] = useInput(0.0);
@@ -38,4 +38,4 @@ function ImcForm({ onSubmit }) {
   );
 }
 
-export default ImcForm;
+export default IrpfForm;

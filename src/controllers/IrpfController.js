@@ -1,12 +1,12 @@
-export default class ImcController {
+export default class IrpfController {
   constructor() {
-    this.imcDriver = null;
+    this.irpfDriver = null;
   }
 
   async prepare() {
-    if (!this.imcDriver) {
-      const { default: ImcDriver } = await import('../drivers/ImcDriver');
-      this.imcDriver = new ImcDriver();
+    if (!this.irpfDriver) {
+      const { default: IrpfDriver } = await import('../drivers/IrpfDriver');
+      this.irpfDriver = new IrpfDriver();
     }
 
     return this;
@@ -15,7 +15,7 @@ export default class ImcController {
   async loadTable(onSucceed) {
     const instance = await this.prepare();
     instance
-      .imcDriver
+      .irpfDriver
       .getTable()
       .then(onSucceed)
       .catch(function (err) {
@@ -27,7 +27,7 @@ export default class ImcController {
   async calculate(person) {
     const instance = await this.prepare();
     return instance
-      .imcDriver
+      .irpfDriver
       .calculate(person);
   }
 }
