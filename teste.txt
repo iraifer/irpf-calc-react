@@ -1,0 +1,16 @@
+ O volume na unidade D ‚ Data
+ O N£mero de S‚rie do Volume ‚ 241A-D614
+
+ Pasta de D:\GitHub\WebDeveloping
+
+29/03/2021  16:06    <DIR>          .
+29/03/2021  16:06    <DIR>          ..
+29/03/2021  15:59               333 .gitignore
+29/03/2021  15:59               949 package.json
+29/03/2021  15:59    <DIR>          public
+29/03/2021  15:59             3.432 README.md
+29/03/2021  15:59    <DIR>          src
+29/03/2021  16:06                 0 teste.txt
+29/03/2021  15:59           523.186 yarn.lock
+               5 arquivo(s)        527.900 bytes
+               4 pasta(s)   1.761.246.400.512 bytes dispon¡veis
