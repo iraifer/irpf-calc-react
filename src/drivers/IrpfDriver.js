@@ -30,6 +30,7 @@ export default class IrpfDriver {
    * @param {Person} person 
    */
   async calculate(person) {
+    console.log("Antes de Calcular ->" + person);
     const response = await this.xhr
       .post('http://localhost:8080', '/irpf/calculate', person);
 

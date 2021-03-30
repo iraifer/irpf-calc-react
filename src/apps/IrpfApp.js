@@ -14,8 +14,8 @@ function IrpfApp() {
   const [,setPerson] = usePerson();
   const [controller,] = useState(new IrpfController());
  
-  const calculateIrpf = async (height, weight) => {
-    var newPerson = new Person(parseFloat(height),parseFloat(weight));
+  const calculateIrpf = async (totalSalary, dependentsNumber) => {
+    var newPerson = new Person(parseFloat(totalSalary),parseFloat(dependentsNumber));
 
     const calculatedPerson = await controller.calculate(newPerson.toObject());
     setPerson(calculatedPerson);

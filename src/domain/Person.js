@@ -9,11 +9,11 @@ export default class Person {
     return this.totalSalary && this.dependentsNumber;
   }
 
-  get height() {
+  get totalSalary() {
     return this._totalSalary;
   }
 
-  get weight() {
+  get dependentsNumber() {
     return this._dependentsNumber;
   }
 
@@ -21,19 +21,19 @@ export default class Person {
     return this._irpf;
   }
 
-  set height(thetotalSalary) {
-    console.log('setting total salary');
+  set totalSalary(thetotalSalary) {
     this._totalSalary = thetotalSalary;
+    console.log('setting total salary ' + this._totalSalary);
   }
 
-  set weight(thedependentsNumber) {
-    console.log('setting dependents numbert');
+  set dependentsNumber(thedependentsNumber) {
     this._dependentsNumber = thedependentsNumber;
+    console.log('setting dependents number ' + this._dependentsNumber);
   }
 
   set irpf(theIrpf)  {
-    console.log('setting irpf');
     this._irpf = theIrpf;
+    console.log('setting irpf ' + this._irpf);
   }
 
   toObject() {

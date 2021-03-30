@@ -4,36 +4,27 @@ import { usePerson } from '../../hooks/usePerson.hook';
 function IrpfForm({ onSubmit }) {
   const [person] = usePerson();
 
-  const [height, , heightProps] = useInput(0.0);
-  const [weight, , weightProps] = useInput(0.0);
+  const [totalSalary, , totalSalaryProps] = useInput(0.0);
+  const [dependentsNumber, , dependentsNumberProps] = useInput(0.0);
 
   const submit = (evt) => {
     evt.preventDefault();
-    onSubmit(height, weight);
+    onSubmit(totalSalary, dependentsNumber);
   };
 
   return (
     <form onSubmit={submit}>
       <div className="row">
-        <label>Altura</label>
-        <input id="altura" placeholder="0.00" {...heightProps} />
+        <label>Salário Bruto</label>
+        <input id="totalSalary" placeholder="0.00" {...totalSalaryProps} />
       </div>
       <div className="row">
-        <label>Peso</label>
-        <input id="peso" placeholder="0.00" {...weightProps} />
+        <label>Número de Dependentes</label>
+        <input id="dependentsNumber" placeholder="0.00" {...dependentsNumberProps} />
       </div>
       <button type="submit" className="action">
         Calcular
       </button>
-      <hr />
-      <label>
-        <strong>altura:</strong>
-        <span>{person.height}</span>
-      </label>
-      <label>
-        <strong>peso:</strong>
-        <span>{person.weight}</span>
-      </label>
     </form>
   );
 }

@@ -14,6 +14,10 @@ function IrpfTableView() {
   }, [controller]);
   
   return (<table id="unique"><tbody id="body">
+      <tr>
+      <td>Valor</td>
+      <td>Percentual</td>
+      </tr>
       {  Object.keys(tableData)
         .sort()
         .map((k) =>

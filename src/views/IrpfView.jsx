@@ -5,9 +5,9 @@ function IrpfView({ className }) {
   const [person] = usePerson();
 
   return (
+
     <div className={className}>
-      Seu IMC &eacute; <span id="irpf">{person.irpf}</span> ==>{" "}
-      <strong>{person.irpfDescription}</strong>
+      Calculo do valor total do IRPF &eacute; R$<strong><span id="irpf">{person.irpf}</span></strong> 
     </div>
   );
 }
