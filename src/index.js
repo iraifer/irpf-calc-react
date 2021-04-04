@@ -4,48 +4,22 @@ import 'proxy-polyfill/proxy.min.js';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import PersonContextProvider from './contexts/PersonContextProvider';
 
+import IrpfApp from './apps/IrpfApp';
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 
 function render() {
-  const ImcApp = lazy(() => import('./apps/ImcApp'));
-  const OtherApp = lazy(() => import('./apps/OtherApp'));
 
   ReactDOM.render(
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/imc">Imc App</Link>
-          </li>
-          <li>
-            <Link to="/other">Other App</Link>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <Switch>
-        <Route path="/imc">
-          <Suspense fallback={<span>loading imc app...</span>}>
-            <PersonContextProvider>
-              <ImcApp />
-            </PersonContextProvider>
-          </Suspense>
-        </Route>
-        <Route path="/other">
-          <Suspense fallback={<span>loading other app...</span>}>
-            <OtherApp />
-          </Suspense>
-        </Route>
-      </Switch>
-    </Router>
-    ,
+   <React.StrictMode>
+    <PersonContextProvider>
+      <IrpfApp />
+    </PersonContextProvider>
+  </React.StrictMode>,
     document.getElementById('root')
   );
 }

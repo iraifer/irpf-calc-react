@@ -1,0 +1,1 @@
+{"version":3,"sources":["apps/OtherApp.js"],"names":["OtherApp"],"mappings":"2IAIeA,UAJf,WACE,OAAO","file":"static/js/4.b76757ab.chunk.js","sourcesContent":["function OtherApp() {\r\n  return <div>This is other app!</div>;\r\n}\r\n\r\nexport default OtherApp;"],"sourceRoot":""}

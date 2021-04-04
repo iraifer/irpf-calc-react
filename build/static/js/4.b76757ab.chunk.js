@@ -1,0 +1,2 @@
+(this["webpackJsonpimc-calc-react"]=this["webpackJsonpimc-calc-react"]||[]).push([[4],{402:function(c,t,i){"use strict";i.r(t);var e=i(12);t.default=function(){return Object(e.jsx)("div",{children:"This is other app!"})}}}]);
+//# sourceMappingURL=4.b76757ab.chunk.js.map
